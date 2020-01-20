@@ -68,20 +68,30 @@ h1, h2, h3, h4, h5 {
 
 * {
 	box-sizing:border-box;
-	border: 5px solid black;
 }
 /* ==== NavBar ====*/
 .navbar{
 	display: flex;
-	justify-content: space-evenly;
-	
-	
+    justify-content: flex-start;	
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
 }
-a {
-	padding: 1%;
-	color: slategray;
-	text-decoration-line: none;
+
+.navbar nav {
+    display: flex;
+    justify-content: space-around;
+    width: 70%; 
+    
 }
+
+.navbar nav a {
+    padding: 0% 3%;
+    color: gray;
+    text-decoration-line: none;
+}
+
+
 
 /* ========= Header =========== */
 
@@ -328,4 +338,10 @@ ul {
 	justify-content: center;
 	
  }
+/* ---- Site Media Queries ---- */
+@media screen and (max-width:800px){
 
+}
+@media screen and (max-width:500px){
+
+}
