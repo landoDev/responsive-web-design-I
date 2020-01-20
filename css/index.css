@@ -61,13 +61,14 @@ html, body {
 h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 * {
-	box-sizing:border-box;
+    box-sizing:border-box;
+    max-width: 100%;
 }
 /* ==== NavBar ====*/
 .navbar{
@@ -340,20 +341,18 @@ ul {
  }
 /* ---- Site Media Queries ---- */
 @media screen and (max-width:800px){
+    
     .navbar{
         display: flex;
         flex-direction: column-reverse;
-        justify-content: flex-start;	
-        align-items: center;
-        text-align: center;
-        margin-bottom: 2%;
+        justify-content: center;
+
     }
     
     .navbar nav {
         display: flex;
-        justify-content: space-around;
-        width: 70%; 
-        
+        justify-content: space-evenly;
+        align-items: center;
     }
     
     .navbar nav a {
@@ -362,8 +361,9 @@ ul {
         text-decoration-line: none;
     }
 
-    .navbar .logo img {
-        margin-bottom: 5%;
+    .navbar .logo {
+        align-self: center;
+        margin: 3% 0;
     }
     .header {
         display: flex;
@@ -374,20 +374,16 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0% 5% 0% 5%;
     }
     
     .title{
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-around;
         align-items: center;
-        width: 49%;
-        padding: 5%;
     }
     .title h1 {
-        font-size: 80px;
-        text-align: center;
+        font-size: 70px;
     }
     
     .title button{
@@ -424,5 +420,28 @@ ul {
     
 }
 @media screen and (max-width:500px){
+    .navbar{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:space-evenly;	
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+    
+    .navbar nav {
+        display: flex;
+        justify-content: column;    
+        width:100%;
+    }
+    
+    .navbar nav a {
+        padding: 0% 3%;
+        color: gray;
+        text-decoration-line: none;
+    }
 
+    .navbar .logo img {
+        margin-bottom: 5%;
+    }
 }
